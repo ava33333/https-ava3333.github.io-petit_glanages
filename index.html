@@ -10,16 +10,6 @@
 
     <style>
         body {
-            <nav class="menu">
-                <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
-                <ul id="menu-list" class="menu-list">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="glanages.html">Mes Glanages</a></li>
-                    <li><a href="reflexion.html">Réflexion</a></li>
-                    <li><a href="apropos.html">À propos</a></li>
-                </ul>
-            </nav>
-
             font-family: 'Oswald', sans-serif;
             background: #faf8f5;
             color: #333;
@@ -42,9 +32,59 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.08);
         }
+
+        /* MENU STYLES */
+        .menu {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .menu-toggle {
+            background: #6b705c;
+            color: white;
+            padding: 10px 15px;
+            width: fit-content;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+            display: none;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-list li {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .menu-list li:last-child {
+            border-bottom: none;
+        }
+        .menu-list a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #333;
+        }
+        .menu-list a:hover {
+            background: #f2f2f2;
+        }
     </style>
 </head>
 <body>
+
+<!-- MENU GOES HERE (INSIDE BODY) -->
+<nav class="menu">
+    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+    <ul id="menu-list" class="menu-list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="glanages.html">Mes Glanages</a></li>
+        <li><a href="reflexion.html">Réflexion</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+    </ul>
+</nav>
 
 <header>
     <h1>La Durabilité & Le Glanage</h1>
@@ -78,6 +118,14 @@
         simple et accessible à tous.
     </p>
 </div>
+
+<!-- MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const list = document.getElementById('menu-list');
+    list.style.display = (list.style.display === 'block') ? 'none' : 'block';
+}
+</script>
 
 </body>
 </html>
