@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mes Réflexions</title>
+    <title>Accueil</title>
 
     <!-- IMPORT OSWALD FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,14 +12,14 @@
         body {
             font-family: 'Oswald', sans-serif;
             background: #faf8f5;
-            color: #52b69a;
+            color: #1e6091;
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
             line-height: 1.6;
         }
         h1, h2 {
-            color: #52b69a;
+            color: #004e64;
         }
         header {
             text-align: center;
@@ -33,14 +33,13 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.08);
         }
 
-      
         /* MENU STYLES */
         .menu {
             position: relative;
             margin-bottom: 1.5rem;
         }
         .menu-toggle {
-            background: #52b69a;
+            background: #036666;
             color: white;
             padding: 10px 15px;
             width: fit-content;
@@ -73,4 +72,34 @@
             background: #f2f2f2;
         }
     </style>
-  </head>
+</head>
+<body>
+
+<!-- MENU GOES HERE (INSIDE BODY) -->
+<nav class="menu">
+    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+    <ul id="menu-list" class="menu-list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="durabilité_et_glanage.html">Durabiité & Glanage</a></li>
+        <li><a href="réflexion.html">Réflexion</a></li>
+    </ul>
+</nav>
+
+
+<div class="section">
+    <h2>Mes Glanages</h2>
+    <p>
+        à determiner...
+    </p>
+</div>
+
+<!-- MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const list = document.getElementById('menu-list');
+    list.style.display = (list.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
